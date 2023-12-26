@@ -1,9 +1,10 @@
+import 'package:fire_commerce/features/authentications/screens/widgets/on_boarding_dot_navigation.dart';
+import 'package:fire_commerce/features/authentications/screens/widgets/on_boarding_next_button.dart';
+import 'package:fire_commerce/features/authentications/screens/widgets/on_boarding_page.dart';
+import 'package:fire_commerce/features/authentications/screens/widgets/on_boarding_skip.dart';
 import 'package:fire_commerce/utils/constants/image_strings.dart';
-import 'package:fire_commerce/utils/constants/sizes.dart';
 import 'package:fire_commerce/utils/constants/text_strings.dart';
-import 'package:fire_commerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
 
@@ -15,51 +16,32 @@ class OnBoardingScreen extends StatelessWidget {
           /// Horizontal Scrollable Pages
           PageView(
             children: const [
-              OnBoardingPage(image: TImages.onBoardingImage1,title: TTexts.onBoardingTitle1,subTitle: TTexts.onBoardingSubTitle1,),
-              OnBoardingPage(image: TImages.onBoardingImage2,title: TTexts.onBoardingTitle2,subTitle: TTexts.onBoardingSubTitle2,),
-              OnBoardingPage(image: TImages.onBoardingImage3,title: TTexts.onBoardingTitle3,subTitle: TTexts.onBoardingSubTitle3,),
+              OnBoardingPage(
+                image: TImages.onBoardingImage1,
+                title: TTexts.onBoardingTitle1,
+                subTitle: TTexts.onBoardingSubTitle1,
+              ),
+              OnBoardingPage(
+                image: TImages.onBoardingImage2,
+                title: TTexts.onBoardingTitle2,
+                subTitle: TTexts.onBoardingSubTitle2,
+              ),
+              OnBoardingPage(
+                image: TImages.onBoardingImage3,
+                title: TTexts.onBoardingTitle3,
+                subTitle: TTexts.onBoardingSubTitle3,
+              ),
             ],
-          )
+          ),
 
           /// Skip Button
+          const OnBoardingSkip(),
 
           /// Dot Navigation SmoothPageIndicator
+          OnBoardingDotNavigation(),
 
           ///  Circular Button
-        ],
-      ),
-    );
-  }
-}
-//---------------------------------------------------------OnBoardingPage Widget For Re Use-----------------------------------------------
-class OnBoardingPage extends StatelessWidget {
-  const OnBoardingPage({
-    super.key, required this.image, required this.title, required this.subTitle,
-  });
-
-  final String image, title, subTitle;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(TSizes.defaultSpace),
-      child: Column(
-        children: [
-          Image(
-              width: THelperFunctions.screenWidth() * 0.8,
-              height: THelperFunctions.screenHeight() * 0.6,
-              image:  AssetImage(image)),
-          Text(
-            title,
-            style: Theme.of(context).textTheme.headlineMedium,
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: TSizes.spaceBtwItems),
-          Text(
-            subTitle,
-            style: Theme.of(context).textTheme.bodyMedium,
-            textAlign: TextAlign.center,
-          ),
+          OnBoardingNextButton()
         ],
       ),
     );
