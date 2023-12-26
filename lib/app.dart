@@ -3,6 +3,7 @@ import 'package:fire_commerce/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
+import 'features/authentications/screens/onboarding.dart';
 import 'home.dart';
 
 
@@ -18,7 +19,7 @@ class App extends StatelessWidget {
       darkTheme: TAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
       // initialBinding: GeneralBindings(),
-      home: const HomeScreen(),
+      home: const OnBoardingScreen(),
     );
   }
 }
