@@ -1,7 +1,7 @@
-import 'package:fire_commerce/features/authentications/screens/widgets/on_boarding_dot_navigation.dart';
-import 'package:fire_commerce/features/authentications/screens/widgets/on_boarding_next_button.dart';
-import 'package:fire_commerce/features/authentications/screens/widgets/on_boarding_page.dart';
-import 'package:fire_commerce/features/authentications/screens/widgets/on_boarding_skip.dart';
+import 'package:fire_commerce/features/authentications/screens/onboarding/widgets/on_boarding_dot_navigation.dart';
+import 'package:fire_commerce/features/authentications/screens/onboarding/widgets/on_boarding_next_button.dart';
+import 'package:fire_commerce/features/authentications/screens/onboarding/widgets/on_boarding_page.dart';
+import 'package:fire_commerce/features/authentications/screens/onboarding/widgets/on_boarding_skip.dart';
 import 'package:fire_commerce/utils/constants/image_strings.dart';
 import 'package:fire_commerce/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
@@ -38,10 +38,10 @@ class OnBoardingScreen extends StatelessWidget {
           const OnBoardingSkip(),
 
           /// Dot Navigation SmoothPageIndicator
-          OnBoardingDotNavigation(),
+          const OnBoardingDotNavigation(),
 
           ///  Circular Button
-          OnBoardingNextButton()
+          const OnBoardingNextButton()
         ],
       ),
     );
