@@ -6,7 +6,7 @@ import 'package:fire_commerce/utils/constants/sizes.dart';
 import 'package:fire_commerce/utils/constants/text_strings.dart';
 import 'package:fire_commerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import '../../../../common/spacing_styles.dart';
+import '../../../../common/styles/spacing_styles.dart';
 import 'package:iconsax/iconsax.dart';
 
 class LogInScreen extends StatelessWidget {
