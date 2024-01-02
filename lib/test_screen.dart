@@ -20,7 +20,7 @@ class TestScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(TSizes.md),
               ),
-              child: Image(image: AssetImage(TImages.promoBanner1),),
+              //child: Image(image: AssetImage(TImages.promoBanner1),),
             )
           ],
         ),
